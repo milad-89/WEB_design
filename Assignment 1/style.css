@@ -1,0 +1,145 @@
+body {
+    background-color: rgb(187, 207, 207);
+  }
+
+
+  
+  header {
+    display: block;
+  }
+
+/* p {color:rgb(255, 0, 0)} */
+
+.new{color:blue}
+
+.page-title{ font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 2.5em;
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+    margin: auto;
+    width: 35%;
+    border: 3px solid rgb(0, 34, 128);
+    padding: 10px;
+    text-align: center;
+    opacity: 1.0;
+    border-radius: 15px; 
+    background-color:rgb(187, 207, 207);}
+
+
+
+.font{ font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 2.5em;
+    
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
+    opacity: 1.0;
+    border-radius: 15px; 
+    background-color:rgb(187, 207, 207);}
+
+.footer{color:black;
+    font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 1.25em;
+    
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    opacity: 1.0;
+    border-radius: 15px; 
+    background-color:rgb(187, 207, 207);}
+
+
+.hl{color: aqua;
+    font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 2em;
+    margin: auto;
+    width: 20%;
+    border: 3px solid rgb(128, 0, 0);
+    padding: 10px;
+    text-align: center;
+    opacity: 1.0;
+    border-radius: 15px; }
+
+.list-name{color:chocolate;
+    font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 2.5em;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+    opacity: 1.0;}
+
+.list-element{color:chocolate;
+    font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 2em;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+    list-style-type: circle;
+    opacity: 1.0;
+    text-indent: 2em;
+    list-style-position: inside;}
+
+.image{
+    width: 1840px;
+    height: 1280px;        
+    background: url("Wright Bicycle.jpg") no-repeat;
+    background-size: cover;
+    margin: 20px;
+    opacity: 0.6;
+}
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0.65;}
+
+
+table, th, td {
+    border: 1px solid black;
+    }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    }
+.form{
+    display:flex;
+    justify-content: center;
+}
+
+.form-label{ color:black;
+    font: weight 150px;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 1em;
+    
+    margin: auto;
+    
+    text-align: center;
+    opacity: 1.0;
+    }
+
+
+.button-center {
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+    }
