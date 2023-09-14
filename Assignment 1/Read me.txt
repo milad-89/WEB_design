@@ -1,0 +1,4 @@
+In this assignment I used an externall CSS file to create different classes of styles to be able to modify the different part of the web page.
+I created a personnal page for myself in order to be able to have it in the future as a real personnal page.
+
+For each segment like table or header or menu, first I set the font properties, then set them all to be center of the page and other properties like having a border around them or not.
