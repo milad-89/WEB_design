@@ -1,0 +1,124 @@
+body{
+    background-color: rgb(155, 222, 135);
+}
+
+header{
+    
+    
+    position: relative;
+    
+    
+}
+header p{
+    text-align: center;
+}
+
+nav { float: left;
+    width: 150px;
+    letter-spacing:0.1em;
+    font-weight: bold;
+} 
+nav ul { list-style-type: none; 
+      margin: 0;
+      padding: 0;
+}
+nav a { text-decoration: none; 
+     display: block;
+     padding: 20px;    
+     background-color: #b3c7e6;     
+     border-bottom: 2px solid #ffffff; 
+}
+nav a:link { color: #5d0d0d; }
+nav a:visited { color: #eaeaea; }
+nav a:hover { background-color: #6a1414;
+           color: #869dc7;}
+
+.container {
+    position: relative;
+    font-family: georgia, "Times New Roman", serif;
+    font-size: 3em;
+    text-align: center;
+    color: rgb(2, 0, 0);
+    
+  }
+
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  main { background-color: #dcb670;
+    color: #000000;
+    padding: 10px 20px;
+    overflow: auto; 
+    display: block;
+    } 
+    h2 { color: #10306c; 
+    font-family: arial, sans-serif;
+    margin: 5px; 
+    clear: left;
+    }
+    
+
+    main table{
+
+    }
+
+    figure { float: left;
+        width: 30px;
+        margin: 10px;
+    }
+    figcaption { text-align: left;
+            font-size: .45em;
+            font-style: italic;
+    }
+
+
+  footer {font-size:100%;
+    
+    
+    background-color: #869dc7;
+    clear: both;
+}
+
+footer form{
+    padding-left: 150px;
+    text-align: left;
+    position: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    }
+
+
+header, main, nav, footer, figure, figcaption { display: block; }
+
+@media only screen and (max-width: 768px) {
+	body { margin: 0; }
+	header{font-size: 50%;}                                                             
+	main { margin-left: 0; }
+	nav { float: none; 
+          width: auto; }
+	nav li { display: inline-block;}
+	nav ul { text-align: center; }
+	nav a { border-style: none; }
+	h1, h2 { font-size: 120%; }
+	p { font-size: 90%; }
+}
+
+@media only screen and (max-width: 365px) {
+	header{font-size: 30%;}
+    h1, h2 { font-size: 50%; }
+	span { font-size: 80%; } 
+  	figure { display: none;}
+ 	nav, nav ul, nav li { padding: 0; }
+ 	nav li { display: block; }
+    nav a { display: block; 
+      	padding: 0.5em 0;
+        border-bottom: 2px ridge #00005D; }
+    }
