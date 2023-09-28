@@ -1,0 +1,5 @@
+In this practice I created a a Javascript code that is able to add rows to a table with multiple columns.
+
+I used a function named addNewStudent that check the number of rows and add the appropriate data to the tabel.
+Then we have a check box that activate the dlelet and edit bottuns.
+For each of delete and edit bottuns there is a function that do the deleting of a row or edit a property of a column value in the row.
