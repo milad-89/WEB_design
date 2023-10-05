@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback</title>
+  <style>
+    label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+  </style>
+ </head>
+ <body>
+ <div id="container">
+	 
+	 <main>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		 <br><br>
+		 <form name = 'myForm' method="post" novalidate>
+			<label>Title*:</label>
+			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
+			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
+			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
+			<br><br>
+
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" placeholder="First Name" />	
+			<br><br>
+			
+
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+			<br><br>
+			
+			<p style='display:none ; color:rgb(255, 0, 0)' id="error_emailId">Email is invalid! </p>
+			<label for="emailId">Email Id*:</label>
+			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" />
+			<br><br>
+			
+			<p style='display:none ; color:rgb(255, 0, 0)' id="error_phoneNumber">Phone number is invalid! </p>
+			<label for="phoneNumber">Phone Number*:</label>
+			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
+			<br><br>
+
+
+			<label for="streetAddress1">Street Address 1*:</label>
+			<input type="text" name="stAddress1" id="stAddress1" placeholder="Address" />
+			<br><br>
+
+			<label for="streetAddress2">Street Address 2:</label>
+			<input type="text" name="stAddress2" id="stAddress2" placeholder="Address" />
+			<br><br>
+
+			<label for="city">City*:</label>
+			<input type="text" name="city" id="city" placeholder="city" />
+			<br><br>
+
+			<label for="state">State*:</label>
+			<input type="text" name="state" id="state" placeholder="state" />
+			<br><br>
+			
+            <label for="zipcode">ZipCode*:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+			<br><br>
+             
+            <label for="checkbox">How did you hear*:</label>
+			<input type='checkbox' id = "chBox" name="source" value="facebook" /> Facebook
+            <input type='checkbox' id = "chBox" name="source" value="google" /> Google
+            <input type='checkbox' id = "chBox" name="source" value="yelp" /> Yelp 
+			<br><br> 
+             
+			<label for="slectList" >Select one of the items*:</label>
+			<select id="itemList" multiple>
+				<option value="item1">Item 1</option>
+				<option value="item2">Item 2</option>
+				<option value="item3">Item 3</option>
+				<option value="item4">Item 4</option>
+				<option value="item5">Item 5</option>
+			  </select>
+			<br><br>
+			
+  			<div id="selectedItems"></div>
+			  
+			
+		
+
+
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+			<br><br>
+			<input type="Submit" id = "submitBt" disabled>
+			<input type="Reset">
+			<br><br>
+		 </form>
+	 </main>
+ </div>
+
+ <h2>Table</h2>
+  <table id="dataTable" style="border:solid">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Id</th>
+		<th>Phone Number</th>
+		<th>Street Address 1</th>
+		<th>City</th>
+		<th>State</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table body content will be added dynamically -->
+    </tbody>
+  </table>
+ <script>
+
+	
+
+	const submitBt = document.getElementById('submitBt')
+
+	const firstName = document.getElementById('firstName')
+	const lastName = document.getElementById('lastName')
+	const emailId = document.getElementById('emailId')
+	const phoneNumber = document.getElementById('phoneNumber')
+	const stAddress1 = document.getElementById('stAddress1')
+	const city = document.getElementById('city')
+	const state = document.getElementById('state')
+	const zipcode = document.getElementById('zipcode')
+
+	// run this function whenever the values of any of the above 4 inputs change.
+	// this is to check if the input for all 4 is valid.  if so, enable submitBtn.
+	// otherwise, disable it.
+	const checkEnableButton = () => {
+		submitBt.disabled = !(
+			firstName.value &&
+			lastName.value &&
+			emailId.value &&
+			phoneNumber.value &&
+			stAddress1.value &&
+			city.value &&
+			state.value &&
+			zipcode.value 
+		)
+	}
+
+	firstName.addEventListener('change', checkEnableButton)
+	lastName.addEventListener('change', checkEnableButton)
+	emailId.addEventListener('change', checkEnableButton)
+	phoneNumber.addEventListener('change', checkEnableButton)
+	stAddress1.addEventListener('change', checkEnableButton)
+	city.addEventListener('change', checkEnableButton)
+	state.addEventListener('change', checkEnableButton)
+	zipcode.addEventListener('change', checkEnableButton)
+
+
+	// function isValidEmail(email) {
+	// 	// Regular expression for a valid email address
+	// 	// const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	// 	const emailRegex = /^[a-zA-Z0-9._-]+@northeastern.edu/;
+		
+	// 	return emailRegex.test(email);
+		
+	// }
+
+	// var myemail = document.getElementById('emailId')
+
+	// if (isvalidEmail(myemail)){
+
+	// }else{
+	// 	const emailVal = document.getElementById("emailvalid");
+	// 	emailVal.style.display = "";
+	// }
+
+	// function isValidPhoneNumber(phoneNumber) {
+	// 	// Regular expression for a valid US phone number in the format XXX-XXX-XXXX or (XXX) XXX-XXXX
+	// 	const phoneRegex = /^(\d{3}-\d{3}-\d{4}|\(\d{3}\) \d{3}-\d{4})$/;
+
+	// 	// Use the test method to check if the phone number matches the regex pattern
+	// 	return phoneRegex.test(phoneNumber);
+	// }
+
+	// function isValidGeneral(address) {
+	// 	// Check if the address is not empty or consists only of whitespace
+	// 	return /\S/.test(address);
+	// }
+
+	const form = document.myForm;
+
+	const emailRegex = /^[a-zA-Z0-9._-]+@northeastern\.edu$/;
+	const phoneRegex = /^(\d{3}-\d{3}-\d{4}|\d{3}\) \d{3}-\d{4})$/;
+
+
+	const validate = (e) => {
+		let {id, name, value} = e.target;
+		
+		if (name === "emailId"){
+			if(!value.trim().toLowerCase().match(emailRegex)){
+				document.getElementById(`error_${name}`).style.display = 'block'; 
+			}else{
+				document.getElementById(`error_${name}`).style.display = 'none';
+			}
+
+		}
+		if (name === "phoneNumber"){
+			if(!value.trim().toLowerCase().match(phoneRegex)){
+				document.getElementById(`error_${name}`).style.display = 'block'; 
+			}else{
+				document.getElementById(`error_${name}`).style.display = 'none';
+			}
+
+		}
+	
+	
+	
+	}
+	
+	form.addEventListener('input', validate);
+
+	function isCheckboxChecked(checkboxId) {
+		// Get the checkbox element by its ID
+		const checkbox = document.getElementById(chBox);
+
+		// Check if the checkbox is checked
+		return checkbox.checked;
+	}
+
+	// Get references to the list and container elements
+    const itemList = document.getElementById("itemList");
+    const selectedItemsContainer = document.getElementById("selectedItems");
+
+    // Add an onChange event listener to the list
+    itemList.addEventListener("change", function() {
+      // Clear the existing checkboxes in the container
+      selectedItemsContainer.innerHTML = '';
+
+      // Loop through the selected options and create checkboxes
+      for (const option of itemList.options) {
+        if (option.selected) {
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.value = option.value;
+          checkbox.id = option.value;
+          const label = document.createElement("label");
+          label.textContent = option.text;
+
+          // Append the checkbox and label to the container
+          selectedItemsContainer.appendChild(checkbox);
+          selectedItemsContainer.appendChild(label);
+          selectedItemsContainer.appendChild(document.createElement("br"));
+        }
+      }
+    });
+
+
+	const form2 = document.getElementById("myForm");
+    const dataTable = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Get form input values
+      const fName = document.getElementById("firstName").value;
+      const lName = document.getElementById("lastName").value;
+      const emaleID = document.getElementById("emailId").value;
+	  const phonNum = document.getElementById("phoneNumber").value;
+	  const address1 = document.getElementById("stAddress1").value;
+	  const city = document.getElementById("city").value;
+	  const state = document.getElementById("state").value;
+	  
+
+      // Create a new row and populate it with the form data
+      const newRow = dataTable.insertRow();
+      const cell1 = newRow.insertCell(0);
+      const cell2 = newRow.insertCell(1);
+      const cell3 = newRow.insertCell(2);
+	  const cell4 = newRow.insertCell(3);
+	  const cell5 = newRow.insertCell(4);
+	  const cell6 = newRow.insertCell(5);
+	  const cell7 = newRow.insertCell(6);
+      cell1.textContent = fName;
+      cell2.textContent = lName;
+      cell3.textContent = emaleID;
+	  cell3.textContent = phonNum;
+	  cell3.textContent = address1;
+	  cell3.textContent = city;
+	  cell3.textContent = state;
+
+      // Clear the form input fields
+      form.reset();
+    });
+
+ </script>
+
+ </body>
+</html>
