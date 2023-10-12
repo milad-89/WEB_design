@@ -1,0 +1,133 @@
+@import 'config';
+@import 'container';
+@import 'media';
+
+
+
+
+header{
+    // background-color: $light-color;
+    position: relative;
+    // width: 80%;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+
+    // h1{
+    //     font-family: $font-stack;
+    //     font-size: 3em;
+    //     color: black;
+    // }
+
+    // .container {
+    //     position: relative;
+    //     font-family: $font-stack;
+    //     font-size: 2em;
+    //     text-align: center;
+    //     color: rgb(2, 0, 0);
+        
+    //   }
+    
+    
+    // /* Centered text */
+    // .centered {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //   }
+
+}
+
+
+nav {background-color: black;
+    float: left;
+    width: 200px;
+    letter-spacing:0.1em;
+    font-weight: bold;
+
+    ul { list-style-type: none; 
+        margin: 0;
+        padding: 0;
+    }
+
+    li{
+        font-family: $font-stack;
+        font-size: 20px;
+    }
+    a { text-decoration: none; 
+        display: block;
+        padding: 20px;    
+        background-color: #b3c7e6;     
+        border-bottom: 2px solid #ffffff; 
+    }
+    a:link { color: #5d0d0d; }
+    a:visited { color: #d004fe; }
+    a:hover { background-color: #146a64;
+
+
+    } 
+}
+
+main { 
+    // background-color: #a4dc70;
+    @include set-background($primary-color);
+    position: relative;
+    // width: 80%;
+    text-align: left;
+    margin-left: none;
+    margin-right: 200px;
+    padding: 10px 20px;
+    overflow: auto; 
+    display: block;
+     
+    h2 { @include set-background($primary-color);
+    font-family: $font-stack;
+    margin: none; 
+    clear: left;
+    }
+    
+    p{
+        font-family: $font-stack;
+        font-size: 15px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        }
+
+    figure { float: none;
+        width: 100px;
+        margin: 10px;
+    }
+    figcaption { text-align: left;
+            font-size: 1em;
+            font-style: italic;
+    }
+}
+
+footer {
+    font-family: $font-stack;
+    font-size:100%;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    background-color: #a5b3cd;
+    clear: both;
+
+    form{
+        padding-left: 150px;
+        padding-right: 150px;
+        text-align: left;
+        position: center;
+
+        label {	float: left;
+            width: 150px;}
+
+        button {float: none;
+            
+            }
+    }
+}
+
