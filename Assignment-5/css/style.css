@@ -1,0 +1,179 @@
+.container {
+  position: relative;
+  font-family: georgia, "Times New Roman", serif;
+  font-size: 2em;
+  text-align: center;
+  color: rgb(2, 0, 0);
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper1 {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.wrapper2 {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  header {
+    font-size: 50%;
+  }
+  main {
+    margin-left: 0;
+  }
+  nav {
+    float: none;
+    width: auto;
+  }
+  nav li {
+    display: inline-block;
+  }
+  nav ul {
+    text-align: center;
+  }
+  nav a {
+    border-style: none;
+  }
+  h1, h2 {
+    font-size: 100%;
+  }
+  p {
+    font-size: 90%;
+  }
+}
+@media only screen and (max-width: 365px) {
+  header {
+    font-size: 30%;
+  }
+  h1, h2 {
+    font-size: 50%;
+  }
+  span {
+    font-size: 80%;
+  }
+  figure {
+    display: none;
+  }
+  nav, nav ul, nav li {
+    padding: 0;
+  }
+  nav li {
+    display: block;
+  }
+  nav a {
+    display: block;
+    padding: 0.5em 0;
+    border-bottom: 2px ridge #00005D;
+  }
+}
+header {
+  position: relative;
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+nav {
+  background-color: black;
+  float: left;
+  width: 200px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  font-family: georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  background-color: #b3c7e6;
+  border-bottom: 2px solid #ffffff;
+}
+nav a:link {
+  color: #5d0d0d;
+}
+nav a:visited {
+  color: #d004fe;
+}
+nav a:hover {
+  background-color: #146a64;
+}
+
+main {
+  background-color: rgb(219, 196, 196);
+  color: #000000;
+  position: relative;
+  text-align: left;
+  margin-left: none;
+  margin-right: 200px;
+  padding: 10px 20px;
+  overflow: auto;
+  display: block;
+}
+main h2 {
+  background-color: rgb(219, 196, 196);
+  color: #000000;
+  font-family: georgia, "Times New Roman", serif;
+  margin: none;
+  clear: left;
+}
+main p {
+  font-family: georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+main table, main th, main td {
+  border: 1px solid black;
+}
+main figure {
+  float: none;
+  width: 100px;
+  margin: 10px;
+}
+main figcaption {
+  text-align: left;
+  font-size: 1em;
+  font-style: italic;
+}
+
+footer {
+  font-family: georgia, "Times New Roman", serif;
+  font-size: 100%;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #a5b3cd;
+  clear: both;
+}
+footer form {
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: left;
+  position: center;
+}
+footer form label {
+  float: left;
+  width: 150px;
+}
+footer form button {
+  float: none;
+}/*# sourceMappingURL=style.css.map */
