@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+    font-family: $font-stack;
+    font-size: 2em;
+    text-align: center;
+    color: rgb(2, 0, 0);
+    
+  }
+
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper1{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    
+}
+
+
+.wrapper2{
+    display: flex;
+    column-gap: 40px;
+    
+    
+}
