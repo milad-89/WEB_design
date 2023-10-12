@@ -1,0 +1,23 @@
+$light-color: rgb(0, 255, 234);
+$primary-color: rgb(219, 196, 196);
+$secondary-color: orange;
+$font-stack: georgia, "Times New Roman", serif;
+
+
+
+@function set-text-color($color){
+    @if(lightness($color) > 70){
+        @return #000000;
+    }
+    @else{
+        @return #fff;
+    }
+}
+
+
+
+
+@mixin set-background($color){
+    background-color: $color;
+    color: set-text-color($color);
+}
