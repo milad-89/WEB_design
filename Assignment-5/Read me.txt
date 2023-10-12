@@ -1,0 +1,33 @@
+In this assignment I used an externall CSS file to create different classes of styles to be able to modify the different part of the web page.
+I created a personnal page for myself in order to be able to have it in the future as a real personnal page.
+
+For each segment like table or header or menu, first I set the font properties, then set them all to be center of the page and other properties like having a border around them or not.
+There are the list of tags that are used in my code:
+
+Favicon: I used an icon I created for one of my research in the past.
+
+Table: I brought my education info in the table with solid border.
+
+Form: I created a form for the user to add their info, with input and label
+
+Images: brought an image from previous research used position: relative and 100% with as styles
+
+Hyperlink: I added my Linkedin and Youtube link to the web by using <a> and href
+
+Button: Added a join buttom
+
+audio: Adde a sample audio via source 
+
+video: Added one of my videos vis source
+
+header: having the heaer that contains a background image and a title 
+
+footer: having footer that contains a background color and tel to and email to and form and buttom
+
+summary: used summary to descibe myself
+
+menu: used menu to show my research interest
+
+tel for contact information: Added my phone info 
+
+mailto for contact information: Added my email info
